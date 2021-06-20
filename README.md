@@ -1,6 +1,6 @@
-# test
+# Theme search pokemons
 
-> A Vue.js project
+> It depends on the api available in the repository  https://github.com/MatheusBuenevides/API_Pokemon.
 
 ## Build Setup
 
