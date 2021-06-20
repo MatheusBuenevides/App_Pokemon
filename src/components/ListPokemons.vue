@@ -4,7 +4,7 @@
         <div v-for="(pokemon,index) in pokemons" :key="pokemon.name">
             <div class="">
                 <p>{{pokemon.name}}</p>
-                <button @click="detailsPokemon(index+1)">Detalhes</button>
+                <primary-button :id="index"/>
             </div>
         </div>
     </div>
@@ -12,8 +12,10 @@
 
 <script>
 import axios from 'axios';
+import PrimaryButton from './buttons/PrimaryButton.vue';
 
 export default {
+  components: { PrimaryButton },
     name: 'ListPokemons',
     data () {
         return {
@@ -25,10 +27,6 @@ export default {
         .get(process.env.BASE_URL)
         .then(response => (this.pokemons = response.data)) 
     },
-    methods: {
-        detailsPokemon(id){
-            this.$router.push(`/detalhes/${id}`)
-        }
-    },
+    
 }
 </script>
