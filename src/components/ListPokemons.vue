@@ -1,14 +1,30 @@
 
 <template>
     <div>
-        <div v-for="(pokemon,index) in pokemons" :key="pokemon.name">
-            <div class="">
+        <div v-for="(pokemon,index) in pokemons" :key="pokemon.name" class="content-wrapper">
+            <div class="content">
                 <p>{{pokemon.name}}</p>
                 <primary-button :id="index"/>
             </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+    .content-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .content{
+        display: flex;
+        justify-content: space-between;
+        width: 15%;
+        align-items: center;
+    }
+    p{
+        text-transform: capitalize;
+    }
+</style>
 
 <script>
 import axios from 'axios';
