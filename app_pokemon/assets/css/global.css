@@ -1,3 +1,22 @@
 html{
     font-family: 'Roboto', sans-serif;
 }
+
+.btn-primary{
+    height: 40px;
+    width: 100px;
+    border: none;
+    background: #76D7C4;
+    border-radius: 4px;
+    border: solid 1px #76D7C4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-primary:hover{
+    background-color: #16A085;
+    border:solid 1px #76D7C4;
+}
